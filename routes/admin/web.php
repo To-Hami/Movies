@@ -29,7 +29,7 @@ Route::group([
         Route::resource('roles', 'RoleController');
 
         //admin routes
-        Route::get('/admins/data', 'AdminController@data')->name('admins.data');
+        Route::get('/admins/data','AdminController@data')->name('admins.data');
         Route::delete('/admins/bulk_delete', 'AdminController@bulkDelete')->name('admins.bulk_delete');
         Route::resource('admins', 'AdminController');
 
@@ -37,7 +37,23 @@ Route::group([
         Route::get('/users/data', 'UserController@data')->name('users.data');
         Route::delete('/users/bulk_delete', 'UserController@bulkDelete')->name('users.bulk_delete');
         Route::resource('users', 'UserController');
-//
+
+        //        //genres routes
+        Route::get('/genres/data', 'GenreController@data')->name('genres.data');
+        Route::delete('/genres/bulk_delete', 'GenreController@bulkDelete')->name('genres.bulk_delete');
+        Route::resource('genres', 'GenreController')->only(['index','destroy']);
+
+
+     //        //movies routes
+        Route::get('/movies/data', 'MovieController@data')->name('movies.data');
+        Route::delete('/movies/bulk_delete', 'MovieController@bulkDelete')->name('movies.bulk_delete');
+        Route::resource('movies', 'MovieController')->only(['index','destroy','show']);
+
+     //        //actors routes
+        Route::get('/actors/data', 'ActorController@data')->name('actors.data');
+        Route::delete('/actors/bulk_delete', 'ActorController@bulkDelete')->name('actors.bulk_delete');
+        Route::resource('actors', 'ActorController')->only(['index','destroy']);
+
 
                 //setting routes
         Route::get('/settings/general', 'SettingController@general')->name('settings.general');

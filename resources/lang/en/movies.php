@@ -2,6 +2,7 @@
 
 return [
     'movies' => 'Movies',
+    'name' => 'Name',
     'movie' => 'Movie',
     'title' => 'Title',
     'description' => 'Description',

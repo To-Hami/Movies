@@ -15,7 +15,8 @@
         "laravel/ui": "^3.4",
         "mcamara/laravel-localization": "^1.7",
         "santigarcor/laratrust": "^7.1",
-        "yajra/laravel-datatables-oracle": "^9.21"
+        "yajra/laravel-datatables-oracle": "^9.21",
+      "ext-json": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

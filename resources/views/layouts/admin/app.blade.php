@@ -53,6 +53,7 @@
     {{--noty--}}
     <link rel="stylesheet" href="{{ asset('admin_assets/plugins/noty/noty.css') }}">
     <script src="{{ asset('admin_assets/plugins/noty/noty.min.js') }}"></script>
+    <script src="{{ asset('admin_assets/css/magnific-popup.css') }}"></script>
 
 
 
@@ -73,7 +74,7 @@
         .loader-sm {
             border: 5px solid #f3f3f3;
             border-radius: 50%;
-            border-top: 5px solid #009688;
+            border-top: 5px solid #22A7F0;
             width: 40px;
             height: 40px;
         }
@@ -81,7 +82,7 @@
         .loader-md {
             border: 8px solid #f3f3f3;
             border-radius: 50%;
-            border-top: 8px solid #009688;
+            border-top: 8px solid #22A7F0;
             width: 90px;
             height: 90px;
         }
@@ -171,6 +172,7 @@
 {{--custom--}}
 <script src="{{ asset('admin_assets/js/custom/index.js') }}"></script>
 <script src="{{ asset('admin_assets/js/custom/roles.js') }}"></script>
+<script src="{{ asset('admin_assets/js/custom/jquery.magnific-popup.min.js') }}"></script>
 
 <script>
     $(document).ready(function () {

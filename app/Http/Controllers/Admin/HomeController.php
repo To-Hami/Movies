@@ -12,6 +12,12 @@ class HomeController extends Controller
 {
     public function index()
     {
+        $genresCount = number_format(Genre::count() );
+        $moviesCount = number_format(Movie::count() );
+        $actorsCount = number_format(Actor::count());
+
+
+
 
         return view('admin.home');
     }// end of index
@@ -22,6 +28,10 @@ class HomeController extends Controller
         $moviesCount = number_format(Movie::count(), 1);
         $actorsCount = number_format(Actor::count(), 1);
 
+
+
+
+
         return response()->json([
             'genres_count' => $genresCount,
             'movies_count' => $moviesCount,
@@ -30,20 +40,20 @@ class HomeController extends Controller
 
     }// end of topStatistics
 
-    public function moviesChart()
-    {
-        $movies = Movie::whereYear('release_date', request()->year)
-            ->select(
-                '*',
-                DB::raw('MONTH(release_date) as month'),
-                DB::raw('YEAR(release_date) as year'),
-                DB::raw('COUNT(id) as total_movies'),
-            )
-            ->groupBy('month')
-            ->get();
-
-        return view('admin._movies_chart', compact('movies'));
-
-    }// end of moviesChart
+//    public function moviesChart()
+//    {
+//        $movies = Movie::whereYear('release_date', request()->year)
+//            ->select(
+//                '*',
+//                DB::raw('MONTH(release_date) as month'),
+//                DB::raw('YEAR(release_date) as year'),
+//                DB::raw('COUNT(id) as total_movies'),
+//            )
+//            ->groupBy('month')
+//            ->get();
+//
+//        return view('admin._movies_chart', compact('movies'));
+//
+//    }// end of moviesChart
 
 }//end of controller
