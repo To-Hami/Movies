@@ -62,6 +62,7 @@
 
 
 
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
     <link rel="stylesheet" href="{{ asset('admin_assets/css/custom.css')}}">
 

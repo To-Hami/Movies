@@ -50,7 +50,7 @@ class MovieController extends Controller
                 return view('admin.movies.data_table.genres', compact('movie'));
             })
             ->addColumn('release_date', function (Movie $movie) {
-                return $movie->release_date->format('D-M-Y');
+                return $movie->release_date->format('D-M-Ym');
             })
             ->editColumn('vote_Count', 'admin.movies.data_table.vote_Count')
             ->addColumn('actions', 'admin.movies.data_table.actions')

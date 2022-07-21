@@ -6,7 +6,7 @@
         <img class="app-sidebar__user-avatar" src="{{auth()->user()->image_path}}" alt="User Image">
         <div>
             <p class="app-sidebar__user-name">{{ auth()->user()->name }}</p>
-            <p class="app-sidebar__user-designation">{{ auth()->user()->roles->first()->name }}</p>
+{{--            <p class="app-sidebar__user-designation">{{ auth()->user()->roles->first()->name }}</p>--}}
         </div>
     </div>
 

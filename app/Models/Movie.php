@@ -9,6 +9,7 @@ use phpDocumentor\Reflection\DocBlock\Tags\Return_;
 class Movie extends Model
 {
     protected $fillable = [
+
         'e_id',
         'description',
         'title',
@@ -27,7 +28,14 @@ class Movie extends Model
     //attr
     public function getPosterPathAttribute()
     {
-        Return 'https://image.tmdb.org/t/p/w500' . $this->poster;
+        if($this->poster){
+            Return 'https://image.tmdb.org/t/p/w500' . $this->poster;
+
+        }else{
+            Return 'https://image.tmdb.org/t/p/w500/7RyL4LVB12umzxMHjiiBcv7vucn.jpg';
+
+        }
+
     }
 
 //scope

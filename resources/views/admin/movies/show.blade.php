@@ -71,7 +71,7 @@
                                 <div class="col-md-3">
                                     @if($actor ->image)
                                         <a href="{{$actor->image_path }}">
-                                            <img src="{{$actor->image_path }}" class="img-fluid my-2 img-thumbnail">
+                                            <img src="{{$actor->image_path  }}" class="img-fluid my-2 img-thumbnail">
 
                                         </a>
                                     @endif

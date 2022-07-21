@@ -16,7 +16,14 @@ class Actor extends Model
 
     //attr
     public function getImagePathAttribute(){
-        Return 'https://image.tmdb.org/t/p/w500' . $this->image;
+        if($this->image){
+            Return 'https://image.tmdb.org/t/p/w500' . $this->image;
+
+        }else{
+            Return 'https://image.tmdb.org/t/p/w500/7RyL4LVB12umzxMHjiiBcv7vucn.jpg';
+        }
+
+
     }
     //scope
     //fun

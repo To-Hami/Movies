@@ -5,17 +5,19 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
 
-                <div class="card-body">
+                <div class="card-body" style="border: 2px solid #0d6efd !important; ;border-radius: 20px !important;">
+                    <div class="d-flex justify-content-around ">
+                        <h2 class="my-5 text-primary">My Movies <i class="app-menu__icon fa fa-film"></i> </h2>
+                    </div>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-end" >{{ __('Email Address') }} </label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input id="email" style="border: 2px solid #0d6efd !important;" type="email"  class="form-control @error('email') is-invalid @enderror" name="email" value="super_admin@app.com" required autocomplete="email" autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -29,7 +31,7 @@
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                <input id="password"style="border: 2px solid #0d6efd !important;"  type="password" value="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -57,11 +59,11 @@
                                     {{ __('Login') }}
                                 </button>
 
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
+{{--                                @if (Route::has('password.request'))--}}
+{{--                                    <a class="btn btn-link" href="{{ route('password.request') }}">--}}
+{{--                                        {{ __('Forgot Your Password?') }}--}}
+{{--                                    </a>--}}
+{{--                                @endif--}}
                             </div>
                         </div>
                     </form>

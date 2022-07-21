@@ -77,7 +77,7 @@
                                 <option value="">@lang("site.all") @lang("movies.movie")</option>
                                 @foreach(['now_playing','upcoming'] as $type)
                                     <option
-                                        value="{{$type}}">@lang('movies.' . $type)
+                                        value="{{$type}}" {{$type == request()->type ? 'selected' : ''}} >@lang('movies.' . $type)
                                     </option>
                                 @endforeach
                             </select>
@@ -133,7 +133,7 @@
     <script>
         let genreId = "{{request()->genre_id}}";
         let actorId = "{{request()->actor_id}}";
-        let type;
+        let type = "{{request()->type}}";
 
         let moviesTable = $('#movies-table').DataTable({
             dom: "tiplr",
